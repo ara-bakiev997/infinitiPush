@@ -1,0 +1,25 @@
+name: Push Update
+
+
+on:
+   push:
+ 
+ 
+jobs:
+  clone_public_repo:
+    name: push to repo with token
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update log
+        run: echo "Last updated on $(date)" > update.log
+
+      - name: Commit and Push
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git add update.log
+          git commit -m "update.log"
+          git push 
