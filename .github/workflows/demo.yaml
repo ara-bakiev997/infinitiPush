@@ -18,8 +18,8 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "ara-bakiev997@github.com"
+          git config --global user.name "ara-bakiev997"
           git add update.log
           git commit -m "update.log"
           git push 
