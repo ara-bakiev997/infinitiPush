@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+           token: ${{ secrets.MY_TOKEN }}
 
       - name: Update log
         run: echo "Last updated on $(date)" > update.log
